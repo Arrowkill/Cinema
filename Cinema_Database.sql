@@ -1,7 +1,12 @@
+CREATE TABLE Staff_Account (
+employeeID varchar(8) not null,
+staffPassword varchar(32) not null,
+isDarkMode bool not null,
+primary key (employeeID)
+);
 CREATE TABLE User_Account (
 username varchar(16) not null,
 userPassword varchar(32) not null,
-permissions bool not null,
 isDarkMode bool not null,
 firstName varchar(16) not null,
 lastName varchar(16) not null,
@@ -10,11 +15,11 @@ email varchar(64) not null,
 address varchar(32),
 city varchar(16),
 zipCode int,
-phoneNumber int(10),
+phoneNumber int,
 primary key (username)
 );
 CREATE TABLE Payment (
-cardNumber int(16) not null,
+cardNumber int not null,
 expirationDate date not null,
 cvv int not null,
 address varchar(32) not null,
