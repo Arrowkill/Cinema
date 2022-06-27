@@ -40,7 +40,7 @@ foreign key (userID) references User_Account (username) on delete cascade
 CREATE TABLE Movie_Info (
 movieName varchar(32) not null,
 language varchar(16) not null,
-rating varchar(4) not null,
+rating varchar(8) not null,
 movieDescription blob not null,
 genre varchar(32) not null,
 releaseDate datetime not null,
@@ -49,9 +49,9 @@ primary key (movieName)
 CREATE TABLE Show_Info (
 showID varchar(16) not null,
 movieName varchar(32) not null,
-runTime int not null,
+runTime varchar(16) not null,
 roomFeatures blob not null,
-roomNumber varchar(2),
+roomNumber varchar(8),
 showTime time not null,
 primary key (showID),
 foreign key (movieName) references Movie_Info (movieName) on delete cascade
