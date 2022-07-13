@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+    background: #171717;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 100px
+}
+
+nav .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+nav .navbar-options {
+    display: flex;
+    flex: 1;
+    padding: 0px 0px 0px 350px;
+}
+
+nav .navbar-options li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+nav .navbar-options li a {
+    color: #e7e9eb;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .navbar-options li a:hover {
+    color: #00a8e1;
+    transition: 1s;
+}
+
+nav .searchbar {
+    position: relative;
+}
+
+nav .searchbar input[type="text"] {
+    margin-right: 40px;
+    border: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 35px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav .searchbar .sbutton {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 100%;
+    background: none;
+    border-radius: 3px;
+    color: #fff;
+    transition: all 0.5s 0.3s ease;
+}
+
+nav .searchbar .sbutton i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+nav .searchbar .sbutton.active {
+    background: darkblue;
+    transition: all 0.3s ease;
+}
+
+nav .searchbar input[type="text"].active {
+    width: 250px;
+    padding: 0px 10px;
+    transition: all 0.5s 0.2s ease;
+}
+
+nav .login li {
+    list-style: none;
+    display: flex;
+}
+
+nav .login li a {
+    color: #e7e9eb;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+nav .login li a:hover {
+    color: #00a8e1;
+    transition: 1s;
+}
+
+nav .login p {
+    list-style: none;
+    display: flex;
+    color: white;
+    font-size: 20px;
+    font-weight: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.fa-search {
+    opacity: 1;
+    pointer-events: all;
+    transition: 700ms;
+}
+
+.fa-search.active {
+    opacity: 0;
+    pointer-events: none;
+    transition: 700ms;
+}
+
+.fa-x {
+    opacity: 0;
+    pointer-events: none;
+    transition: 700ms;
+}
+
+.fa-x.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 700ms;
+}
+
+/* Vertical Divider In Navbar */
+
+.vertical-divider {
+    border-left: .5px solid white;
+    height: 40px;
+    margin-left: 10px;
+}
+
+/* Banner Image Section*/
+
+.bannerimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #00030a;
+    height: 450px;
+}
+
+.bannerimage .bannerselection {
+    max-height: inherit;
+    display: flex;
+    justify-content: center;
+    padding-top: 425px;
+}
+
+.bannerimage .fa-angle-left {
+    text-decoration: none;
+    float: left;
+    color: gray;
+    font-size: 25px;
+}
+
+.bannerimage .fa-angle-right {
+    text-decoration: none;
+    float: right;
+    color: gray;
+    font-size: 25px;
+}
+
+.fa-stack {
+    padding: 6.5px 9px;
+    font-size: 0.45em;
+}
+
+.fa-stack i{
+    vertical-align: middle;
+}
+
+.bannerimage .fa-circle {
+    text-decoration: none;
+    float: right;
+    color: gray;
+    font-size: 13px;
+}
+
+.bannerimage .fa-circle-dot {
+    text-decoration: none;
+    float: right;
+    color: gray;
+    font-size: 13px;
+}
+
+.button1 {
+    background: none;
+    transition: all 0.5s 0.3s ease;
+}
+
+.button1 .fa-circle-dot {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.button1 .fa-circle-dot.active {
+    opacity: 1;
+}
+
+.button1 .fa-circle {
+    opacity: 1;
+}
+
+.button .fa-circle-active {
+    opacity: 1;
+}
+
+.button1 .fa-circle.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Movie Cards */
+
+.featured_movies p{
+    font-size: 25px;
+    font-weight: 650;
+    margin-left: 6.25%;
+    margin-top: 50px;
+}
+
+.moviecards {
+    display: table;
+    height: 450px;
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    table-layout: fixed;
+}
+
+.card {
+    display: table-cell;
+    height: 450px;
+    width: 300px;
+}
+/*
+.card2 {
+    display: table-cell;
+    text-align: center;
+    background-image: url(./poster2.jpeg);
+    height: 450px;
+    width: 300px;
+}
+
+.card3 {
+    display: table-cell;
+    text-align: center;
+    background-image: url(./poster3.jpeg);
+    height: 450px;
+    width: 300px;
+}
+
+.card4 {
+    display: table-cell;
+    justify-items: center;
+    background-image: url(./poster4.jpeg);
+    height: 450px;
+    width: 300px;
+}
+
+.card5 {
+    display: table-cell;
+    justify-items: center;
+    background-image: url(./poster5.jpeg);
+    height: 450px;
+    width: 300px;
+}
+
+/* Movie Card Section */
+
+.moviecards .i1:hover {
+    filter: drop-shadow(5px 10px 5px gray);
+    transition: 700ms;
+}
+
+.moviecards .i2:hover {
+    filter: drop-shadow(5px 10px 5px gray);
+    transition: 700ms;
+}
+
+.moviecards .i3:hover {
+    filter: drop-shadow(5px 10px 5px gray);
+    transition: 700ms;
+}
+
+.moviecards .i4:hover {
+    filter: drop-shadow(5px 10px 5px gray);
+    transition: 700ms;
+}
+
+.moviecards .i5:hover {
+    filter: drop-shadow(5px 10px 5px gray);
+    transition: 700ms;
+}
+
+/* Footer Section */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    background-color: #171717;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.footer_logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
