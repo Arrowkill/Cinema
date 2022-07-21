@@ -1,10 +1,11 @@
 import React from 'react';
-import { Movie, FooterBanner, HeroBanner } from '../components';
+import { Movie, FooterBanner, HeroBanner, Navbar } from '../components';
 
 
 const Home = ({ movies, bannerData}) => {
   return (
     <div>
+      <Navbar />
       <HeroBanner />
         
     <div className="products-heading">
