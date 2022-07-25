@@ -31,7 +31,7 @@ const Navbar = () => {
 
   {/* This block of CSS handles the logo of Enraged Tabby on the navbar */}
   const logo = {
-    color: 'white',
+    color: '#e7e9eb',
     fontSize: '30px',
     fontWeight: '600',
     letterSpacing: '-1px'

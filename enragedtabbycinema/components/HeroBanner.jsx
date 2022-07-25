@@ -1,16 +1,14 @@
 import React from 'react'
 import {useState} from 'react'
-import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Carousel from 'react-bootstrap/Carousel'
 import Link from 'next/link'
 
-const images = ['https://i.imgur.com/EDOQSs3.jpeg', 'https://i.imgur.com/cLsChiY.jpeg', 'https://i.imgur.com/aWHu2TD.jpeg', 'https://i.imgur.com/olj6orn.jpeg']
-const imageIndex = 0
+{/*const images = ['https://i.imgur.com/EDOQSs3.jpeg', 'https://i.imgur.com/cLsChiY.jpeg', 'https://i.imgur.com/aWHu2TD.jpeg', 'https://i.imgur.com/olj6orn.jpeg']
+const imageIndex = 0*/}
 
 const HeroBanner = () => {
-  const [imageChoice, setImageChoice] = useState({imageIndex: 0})
-  const [enterDirection, setEnterDirection] = useState('none')
+  {/*const [imageChoice, setImageChoice] = useState({imageIndex: 0})
   const nextImage = () => {
     if(imageIndex < (images.length - 1)) {
       console.log("before: ", imageIndex, " ", images.length)
@@ -38,38 +36,43 @@ const HeroBanner = () => {
     }
     setImageChoice({imageIndex})
     console.log(images[imageChoice.imageIndex])
-  }
+  }*/}
 
   const carousel = {
-    padding: '0px',
     backgroundColor: '#dcdcdc',
     position: 'flex',
-    height: '500px',
-    lineHeight: '0.9',
     width: '100%',
   }
   const banner_ad = {
-    backgroundImage: 'url(' + images[imageChoice.imageIndex] + ')',
-    backgroundSize: 'cover',
+    objectFit: 'cover',
     height: '500px',
   }
   return (
     <div style={carousel}>
       <Carousel variant='dark'>
         <Carousel.Item style={banner_ad}>
-          <img class='d-block w-100' src='https://i.imgur.com/EDOQSs3.jpeg' />
+          <img class='d-block w-100' src='https://raw.githubusercontent.com/Arrowkill/Cinema/development/bannerimage_1.jpg' />
         </Carousel.Item>
 
         <Carousel.Item style={banner_ad}>
           <img class='d-block w-100' src='https://i.imgur.com/cLsChiY.jpeg' />
+          <Carousel.Caption>
+            Test 2
+          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item style={banner_ad}>
           <img class='d-block w-100' src='https://i.imgur.com/aWHu2TD.jpeg' />
+          <Carousel.Caption>
+            Test 3
+          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item style={banner_ad}>
           <img class='d-block w-100' src='https://i.imgur.com/olj6orn.jpeg' />
+          <Carousel.Caption>
+            Test 4
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>
