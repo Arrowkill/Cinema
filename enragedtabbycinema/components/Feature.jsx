@@ -10,7 +10,18 @@ const Feature = () => {
         marginTop: '75px',
         fontSize: '30px',
         fontWeight: '650',
-        paddingLeft: '7.9%'
+        textAlign: 'center',
+    }
+    const horizontal_divider = {
+        display: 'block',
+        height: '1px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: '87%',
+        border: '0',
+        borderTop: '1.5px solid black',
+        margin: '1em 0',
+        padding: '0'
     }
     const movie_cards_table = {
         display: 'table',
@@ -20,7 +31,7 @@ const Feature = () => {
         marginRight: 'auto',
         tableLayout: 'fixed',
         borderCollapse: 'separate',
-        borderSpacing: '20px 0px'
+        borderSpacing: '40px 0px'
     }
     const [isHoverOne, setIsHoverOne] = useState(false)
     const mouseHoverOverOne = () => {
@@ -95,6 +106,7 @@ const Feature = () => {
     return (
         <div style={featured_movie_section}>
             <h3 style={featured_movie_title}>Featured Movies</h3>
+            <hr style={horizontal_divider} />
             <div style={movie_cards_table}>
                 <div style={movie_card_one} onMouseEnter={mouseHoverOverOne} onMouseLeave={mouseStopHoverOverOne}>
                     <img src='https://raw.githubusercontent.com/Arrowkill/Cinema/development/poster1.jpeg' />
