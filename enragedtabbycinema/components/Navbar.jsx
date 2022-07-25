@@ -104,7 +104,8 @@ const Navbar = () => {
     position: 'relative',
     webkitUserSelect: 'none',
     mozUserSelect: 'none',
-    msUserSelect: 'none'
+    msUserSelect: 'none',
+    userSelect: 'none'
   }
   const searchbar_input = {
     marginRight: '40px',
@@ -195,11 +196,11 @@ const Navbar = () => {
 
   {/* HTML Tags in React */}
   return (
-    <div style={navbar} class='navbar'>
-      <div style={logo} class='logo'>
+    <div style={navbar} >
+      <div style={logo} >
         Enraged Tabby Cinema
       </div>
-      <div style={navbar_option} class='navbar-options'>
+      <div style={navbar_option} >
         <li style={navbar_option_li}>
           <a style={navbar_option_li_a_movies} onMouseEnter={onMouseMoveOnMovies} onMouseLeave={onMouseMoveOffMovies} href='#!'>
             Movies
@@ -216,14 +217,14 @@ const Navbar = () => {
           </a>
         </li>
       </div>
-      <div style={searchbar} class='searchbar' unselectable='off'>
+      <div style={searchbar} unselectable='off'>
         <input style={searchbar_input} type='text' placeholder='Search' />
-        <div style={searchbar_button} class='searchbar-button'>
+        <div style={searchbar_button} >
           <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" style={searchbar_button_magnifying} onClick={onMouseClickSearch} disabled={isClickedSearch} />
           <FontAwesomeIcon icon="fa-solid fa-xmark" style={searchbar_button_x} onClick={onMouseClickSearch} disabled={!isClickedSearch} />
         </div>
       </div>
-      <div style={divider} class='divider' />
+      <div style={divider} />
       <div style={{whiteSpace: 'nowrap'}}>
         <li style={navbar_option_li}>
           <a style={login_signIn} onMouseEnter={onMouseMoveOnSignIn} onMouseLeave={onMouseMoveOffSignIn} href='#!'>Sign In</a>
