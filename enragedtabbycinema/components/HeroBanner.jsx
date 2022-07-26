@@ -37,17 +37,22 @@ const HeroBanner = () => {
     setImageChoice({imageIndex})
     console.log(images[imageChoice.imageIndex])
   }*/}
-
+  const carousel_parent = {
+    display: 'table',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }
   const carousel = {
     backgroundColor: '#dcdcdc',
-    position: 'flex',
-    width: '100%',
+    display: 'table-cell',
+    width: '1728px'
   }
   const banner_ad = {
     objectFit: 'cover',
     height: '500px',
   }
   return (
+    <div style={carousel_parent}>
     <div style={carousel}>
       <Carousel variant='dark'>
         <Carousel.Item style={banner_ad}>
@@ -75,6 +80,7 @@ const HeroBanner = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+    </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const FooterBanner = () => {
     justifyContent: 'center',
     backgroundColor: '#171717',
     height: '100px',
-    marginTop: '125px'
+    marginTop: '125px',
   }
   const footer_logo = {
     color: '#e7e9eb',
