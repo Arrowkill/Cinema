@@ -16,8 +16,12 @@ const Navbar = () => {
   {/* CSS Style Constants */}
   {/* This block of CSS handles the navbar as a whole 
     * and ensures it is formatted with the proper font and alignment */}
+
   const navbar= {
     display: 'flex',
+    position: 'fixed',
+    zIndex: '100',
+    width: '100%',
     whiteSpace: 'nowrap',
     outline: 'none',
     boxSizing: 'border-box',

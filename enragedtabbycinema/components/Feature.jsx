@@ -106,7 +106,6 @@ const Feature = () => {
     return (
         <div style={featured_movie_section}>
             <h3 style={featured_movie_title}>Featured Movies</h3>
-            <hr style={horizontal_divider} />
             <div style={movie_cards_table}>
                 <div style={movie_card_one} onMouseEnter={mouseHoverOverOne} onMouseLeave={mouseStopHoverOverOne}>
                     <img src='https://raw.githubusercontent.com/Arrowkill/Cinema/development/poster1.jpeg' />
