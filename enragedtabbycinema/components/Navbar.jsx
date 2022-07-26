@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +27,7 @@ const Navbar = () => {
     alignItems: 'center',
     justifyContent: 'space-between',
     lineHeight: '40px',
-    padding: '0px 100px'
+    padding: '0px 100px',
   }
 
   {/* This block of CSS handles the logo of Enraged Tabby on the navbar */}
@@ -34,7 +35,8 @@ const Navbar = () => {
     color: '#e7e9eb',
     fontSize: '30px',
     fontWeight: '600',
-    letterSpacing: '-1px'
+    letterSpacing: '-1px',
+    textDecoration: 'none'
   }
 
   {/* This block of CSS handles the navbar options in the center. 
@@ -197,24 +199,32 @@ const Navbar = () => {
   {/* HTML Tags in React */}
   return (
     <div style={navbar} >
-      <div style={logo} >
-        Enraged Tabby Cinema
+      <div >
+        <Link href='/'>
+          <a style={logo}>Enraged Tabby Cinema</a>
+        </Link>
       </div>
       <div style={navbar_option} >
         <li style={navbar_option_li}>
-          <a style={navbar_option_li_a_movies} onMouseEnter={onMouseMoveOnMovies} onMouseLeave={onMouseMoveOffMovies} href='#!'>
-            Movies
-          </a>
+          <Link href='/movies'>
+            <a style={navbar_option_li_a_movies} onMouseEnter={onMouseMoveOnMovies} onMouseLeave={onMouseMoveOffMovies}>
+              Movies
+            </a>
+          </Link>
         </li>
         <li style={navbar_option_li}>
-          <a style={navbar_option_li_a_showtimes} onMouseEnter={onMouseMoveOnShowtimes} onMouseLeave={onMouseMoveOffShowtimes} href='#!'>
-            Showtimes
-          </a>
+          <Link href='/showtimes'>
+            <a style={navbar_option_li_a_showtimes} onMouseEnter={onMouseMoveOnShowtimes} onMouseLeave={onMouseMoveOffShowtimes}>
+              Showtimes
+            </a>
+          </Link>
         </li>
         <li style={navbar_option_li}>
-          <a style={navbar_option_li_a_ourCinema} onMouseEnter={onMouseMoveOnOurCinema} onMouseLeave={onMouseMoveOffOurCinema} href='#!'>
-            Our Cinema
-          </a>
+          <Link href='/our_cinema'>
+            <a style={navbar_option_li_a_ourCinema} onMouseEnter={onMouseMoveOnOurCinema} onMouseLeave={onMouseMoveOffOurCinema}>
+              Our Cinema
+            </a>
+          </Link>
         </li>
       </div>
       <div style={searchbar} unselectable='off'>
@@ -227,9 +237,17 @@ const Navbar = () => {
       <div style={divider} />
       <div style={{whiteSpace: 'nowrap'}}>
         <li style={navbar_option_li}>
-          <a style={login_signIn} onMouseEnter={onMouseMoveOnSignIn} onMouseLeave={onMouseMoveOffSignIn} href='#!'>Sign In</a>
+          <Link href='/signin'>
+            <a style={login_signIn} onMouseEnter={onMouseMoveOnSignIn} onMouseLeave={onMouseMoveOffSignIn}>
+              Sign In
+            </a>
+          </Link>
           <a style={login_or}> or </a>
-          <a style={login_register} onMouseEnter={onMouseMoveOnRegister} onMouseLeave={onMouseMoveOffRegister} href='#!'>Create an Account</a>
+          <Link href='/signin'>
+            <a style={login_register} onMouseEnter={onMouseMoveOnRegister} onMouseLeave={onMouseMoveOffRegister}>
+              Create an Account
+            </a>
+          </Link>
         </li>
       </div>
     </div>

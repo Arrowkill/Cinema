@@ -2,20 +2,13 @@ import React from 'react';
 import { FooterBanner, HeroBanner, Navbar, Feature, } from '../components';
 
 
-const Home = ({ movies, bannerData}) => {
-  const page = {
-    backgroundColor: 'white'
-  }
+export default function Home() {
   return (
-    <div style={page}>
+    <div>
       <Navbar />
       <HeroBanner />
-        
       <Feature />
-
       <FooterBanner />
     </div>
   )
 }
-
-export default Home;

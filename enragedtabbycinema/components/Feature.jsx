@@ -15,9 +15,9 @@ const Feature = () => {
     const horizontal_divider = {
         display: 'block',
         height: '1px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        width: '87%',
+        marginLeft: '7% !important',
+        marginRight: '7% !important',
+        width: '86%',
         border: '0',
         borderTop: '1.5px solid black',
         margin: '1em 0',
