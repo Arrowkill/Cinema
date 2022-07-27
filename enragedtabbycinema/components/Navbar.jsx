@@ -247,7 +247,7 @@ const Navbar = () => {
             </a>
           </Link>
           <a style={login_or}> or </a>
-          <Link href='/signin'>
+          <Link href='/register'>
             <a style={login_register} onMouseEnter={onMouseMoveOnRegister} onMouseLeave={onMouseMoveOffRegister}>
               Create an Account
             </a>
