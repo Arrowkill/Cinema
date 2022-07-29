@@ -1,24 +1,19 @@
 import React from 'react';
-import { Movie, FooterBanner, HeroBanner } from '../components';
+import { FooterBanner, HeroBanner, Navbar, Feature, } from '../components';
 
 
-const Home = ({ movies, bannerData}) => {
+export default function Home() {
+  const page = {
+    paddingTop: '60px'
+  }
   return (
     <div>
-      <HeroBanner />
-        
-    <div className="products-heading">
-      <h2>Featured Movies</h2>
-      <p>Find Showtimes</p>
-    </div>
-
-    <div className="products-container">
-      {movies?.map((movie) => movie.name)}
-    </div>
-
-    <FooterBanner />
+      <Navbar />
+      <div style={page}>
+        <HeroBanner />
+        <Feature />
+        <FooterBanner />
+      </div>
     </div>
   )
 }
-
-export default Home;
