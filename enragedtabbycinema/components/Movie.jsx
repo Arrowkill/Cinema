@@ -1,9 +1,22 @@
 import React from 'react'
 
-const Movie = () => {
+// const Movie = () => {
+//   return (
+//     <div>Movie</div>
+//   )
+// }
+
+// export default Movie
+
+const Movie = ({title, index, overview, poster_path}) => {
+  const IMAGES_API = 'https://image.tmdb.org/t/p/w500/';
+
   return (
-    <div>Movie</div>
+    <div className="movie" key={index}>
+      <img src={IMAGES_API + poster_path} alt={title}/>
+      <div className="movie-overview">{overview}</div>
+    </div>
   )
 }
 
-export default Movie
+export default Movie;
