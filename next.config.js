@@ -1,12 +1,9 @@
-/**
-   * @type {import('next').NextConfig}
-   */
-const nextConfig   = {
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
-  assetPrefix: './',
-};
+const isProd = process.env.NODE_ENV === "production";
 
-export default   nextConfig;
+module.exports = {
+  /**
+   * Tell Next.js where the `public` folder is.
+   * Replace `nextjs-github-pages` with your Github repo project name.
+   */
+  assetPrefix: isProd ? "/main/" : "",
+};
