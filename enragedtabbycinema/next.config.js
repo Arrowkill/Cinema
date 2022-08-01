@@ -4,8 +4,4 @@ const nextConfig = {
   swcMinify: true,
 }
 
-const isProd = process.send.NODE_ENV === 'production'
-
-module.exports = {
-  assetPrefix: isProd ? '/development-react/' : ''
-}
+module.exports = nextConfig
